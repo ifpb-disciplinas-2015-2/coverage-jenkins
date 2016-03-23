@@ -5,18 +5,15 @@
  */
 package io.github.jass2125.coverage;
 
-import org.junit.After;
-import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
  *
  * @author Anderson Souza
  */
-public class CalculadoraIT {
+public class CalculadoraTest {
 
     private Calculadora calc;
     private Integer n1;
