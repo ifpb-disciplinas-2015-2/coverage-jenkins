@@ -30,14 +30,16 @@ public class CalculadoraTest {
      * @throws io.github.jass2125.coverage.OperacaoMatematicaException
      */
     @Test(expected = OperacaoMatematicaException.class)
-    public void testSomarValorNulo() throws OperacaoMatematicaException {
+    public void testSomarPrimeiroValorNulo() throws OperacaoMatematicaException {
         n1 = null;
         n2 = new Integer(10);
         calc.somar(n1, n2);
-
-        n1 = new Integer(20);
-        n2 = null;
-        calc.somar(n1, n2);
+    }
+    @Test(expected = OperacaoMatematicaException.class)
+    public void testSomarSegundoValorNulo() throws OperacaoMatematicaException {
+        n1 = null;
+        n2 = new Integer(10);
+        calc.somar(n2, n1);
     }
 
     @Test
