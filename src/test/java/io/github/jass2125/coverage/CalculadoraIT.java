@@ -45,13 +45,13 @@ public class CalculadoraIT {
      * Test of somar method, of class Calculadora.
      * @throws io.github.jass2125.coverage.OperacaoMatematicaException
      */
-//    @Test(expected = OperacaoMatematicaException.class)
-//    public void testSomarValorNulo() throws OperacaoMatematicaException {
-//        calc.somar(n1, n2);
-//        n1 = new Integer(20);
-//        n2 = null;
-//        calc.somar(n1, n2);
-//    }
+    @Test(expected = OperacaoMatematicaException.class)
+    public void testSomarValorNulo() throws OperacaoMatematicaException {
+        calc.somar(n1, n2);
+        n1 = new Integer(20); 
+        n2 = null;
+        calc.somar(n1, n2);
+    }
     
     @Test
     public void Somar() throws OperacaoMatematicaException{
