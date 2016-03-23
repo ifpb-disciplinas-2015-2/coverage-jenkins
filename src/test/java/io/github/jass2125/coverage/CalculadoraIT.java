@@ -22,14 +22,6 @@ public class CalculadoraIT {
     private Integer n1;
     private Integer n2;
 
-    @BeforeClass
-    public static void setUpClass() {
-    }
-
-    @AfterClass
-    public static void tearDownClass() {
-    }
-
     @Before
     public void setUp() {
         calc = new Calculadora();
@@ -37,29 +29,26 @@ public class CalculadoraIT {
         n2 = new Integer(10);
     }
 
-    @After
-    public void tearDown() {
-    }
-
     /**
      * Test of somar method, of class Calculadora.
+     *
      * @throws io.github.jass2125.coverage.OperacaoMatematicaException
      */
     @Test(expected = OperacaoMatematicaException.class)
     public void testSomarValorNulo() throws OperacaoMatematicaException {
         calc.somar(n1, n2);
-        n1 = new Integer(20); 
+        n1 = new Integer(20);
         n2 = null;
-        calc.somar(n1, n2);
+        int result = calc.somar(n1, n2);
+        assertEquals(5, result);
     }
-    
+
     @Test
-    public void Somar() throws OperacaoMatematicaException{
+    public void Somar() throws OperacaoMatematicaException {
         n1 = new Integer(8);
         int result = calc.somar(n1, n2);
-        assertEquals(result, 18);
-        
-        
+        assertEquals(18, result);
+
     }
 
 }
