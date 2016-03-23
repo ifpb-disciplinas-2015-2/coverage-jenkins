@@ -22,8 +22,6 @@ public class CalculadoraTest {
     @Before
     public void setUp() {
         calc = new Calculadora();
-        n1 = null;
-        n2 = new Integer(10);
     }
 
     /**
@@ -33,18 +31,21 @@ public class CalculadoraTest {
      */
     @Test(expected = OperacaoMatematicaException.class)
     public void testSomarValorNulo() throws OperacaoMatematicaException {
+        n1 = null;
+        n2 = new Integer(10);
         calc.somar(n1, n2);
+
         n1 = new Integer(20);
         n2 = null;
-        int result = calc.somar(n1, n2);
-        assertEquals(5, result);
+        calc.somar(n1, n2);
     }
 
     @Test
     public void Somar() throws OperacaoMatematicaException {
         n1 = new Integer(8);
+        n2 = new Integer(2);
         int result = calc.somar(n1, n2);
-        assertEquals(18, result);
+        assertEquals(10, result);
 
     }
 

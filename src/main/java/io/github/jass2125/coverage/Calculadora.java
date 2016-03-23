@@ -14,10 +14,10 @@ public class Calculadora {
     
     public int somar(Integer n1, Integer n2) throws OperacaoMatematicaException{
         if(n1 == null){
-            throw new OperacaoMatematicaException("NUmero invalido");
+            throw new OperacaoMatematicaException("Numero invalido");
         }
         if(n2 == null){
-            throw new OperacaoMatematicaException("NUmero invalido");
+            throw new OperacaoMatematicaException("Numero invalido");
         }
         return n1 + n2;
     }
